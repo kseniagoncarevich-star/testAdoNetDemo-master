@@ -187,6 +187,8 @@ public class ConnectedContext(DbConnection connection)
         return result;
     }
     
+    // Задание 1: Реализуй метод DeleteUser(int userId), который удаляет пользователя
+    
     public void DeleteUser(int userId)
     {
         _connection.Open();
@@ -198,6 +200,9 @@ public class ConnectedContext(DbConnection connection)
 
         _connection.Close();
     }
+    
+    // Задание 2: В классе ConnectedAdoNetContext сейчас есть метод GetAllUsers. 
+    // Нужно создать новый метод GetUsersByFilter(string namePart).
     
     public IEnumerable<User> GetUsersByFilter(string namePart)
     {
